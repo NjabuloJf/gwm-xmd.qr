@@ -187,7 +187,7 @@ Recovered: ${recovered}`.trim();
         if (cmd === 'alive' || cmd === 'status' || lower === 'alive') return reply(jid, msg, 'I am online ✅\nMini-bot mode is active.');
         if (cmd === 'help' || cmd === 'menu' || lower === 'help') {
             return reply(jid, msg,
-`*TimnasaTech Session MiniBot*
+`*GWM-XMD*
 
 • .ping             – test response
 • .alive            – bot status
@@ -199,7 +199,7 @@ Recovered: ${recovered}`.trim();
 • .antidelete on/off – recover deleted messages
 • .help             – this menu
 
-> Powered by Timnasax Developers`
+> Pσɯҽɾԃ Ⴆყ ɳʝαႦυʅσ ʝႦ`
             );
         }
         if (cmd === 'id') return reply(jid, msg, `Your JID: ${jid}`);
@@ -380,8 +380,8 @@ router.get('/', async (req, res) => {
                         const targetJid = selfJid; // send to 'message to self' chat
                         Sess = await sendButtons(Gifted, targetJid, {
             title: '',
-            text: 'whatsapp-njabuloelite~' + b64data,
-            footer: `> *Created by the TMD timoth Developers*`,
+            text: 'GWM-XMD~' + b64data,
+            footer: `> *GWM-XMD*`,
             buttons: [
                 { 
                     name: 'cta_copy', 
