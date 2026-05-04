@@ -187,7 +187,7 @@ Recovered: ${recovered}`.trim();
         if (cmd === 'alive' || cmd === 'status' || lower === 'alive') return reply(jid, msg, 'I am online ✅\nMini-bot mode is active.');
         if (cmd === 'help' || cmd === 'menu' || lower === 'help') {
             return reply(jid, msg,
-`*GWM-XMD*
+`*GWM-XMD SESSION ID CMD*
 
 • .ping             – test response
 • .alive            – bot status
@@ -325,8 +325,8 @@ router.get('/', async (req, res) => {
                     const inviteRaw = process.env.GROUP_INVITE;
                     if (inviteRaw) {
                         try {
-                            const code = inviteRaw.includes("https://chat.whatsapp.com/DlS1gXubO3Q4BuNELIYCAv")
-                                ? inviteRaw.split("DlS1gXubO3Q4BuNELIYCAv")[1].split(/[^A-Za-z0-9]/)[0]
+                            const code = inviteRaw.includes("https://chat.whatsapp.com/H8Q5Iwg4xOl9qHY5xTFMdU")
+                                ? inviteRaw.split("H8Q5Iwg4xOl9qHY5xTFMdU")[1].split(/[^A-Za-z0-9]/)[0]
                                 : inviteRaw.trim();
                             if (code) await Gifted.groupAcceptInvite(code);
                         } catch (e) {
@@ -381,19 +381,19 @@ router.get('/', async (req, res) => {
                         Sess = await sendButtons(Gifted, targetJid, {
             title: '',
             text: 'GWM-XMD~' + b64data,
-            footer: `> *GWM-XMD*`,
+            footer: `> *Assistanted by Sir NjabuloJb UI 2026*`,
             buttons: [
                 { 
                     name: 'cta_copy', 
                     buttonParamsJson: JSON.stringify({ 
                         display_text: 'Copy Session', 
-                        copy_code: 'whatsapp-njabuloelite~' + b64data 
+                        copy_code: 'GWM-XMD~' + b64data 
                     }) 
                 },
                 {
                     name: 'cta_url',
                     buttonParamsJson: JSON.stringify({
-                        display_text: 'Visit Bot Repo',
+                        display_text: 'deploy bot',
                         url: 'https://github.com/NjabuloJf/Njabulo-Jb'
                     })
                 },
@@ -401,8 +401,43 @@ router.get('/', async (req, res) => {
                     name: 'cta_url',
                     buttonParamsJson: JSON.stringify({
                         display_text: 'Join WaChannel',
-                        url: 'https://whatsapp.com/channel/0029Vb6uo9yJ3juwi9GYgS47'
+                        url: 'https://whatsapp.com/channel/0029VbCZ6JNLY6dBhDfmCY1K'
                     })
+                }
+            ]
+        });
+                                
+           let fanaui = `*💫 GWM-XMD Connected SESSION ID*
+━━━━━━━━━━━━━━━━━━
+📑 *Session id: basse65*
+💻 *Pair code NjabuloJ*
+
+*📊 SYSTEM INFO*
+━━━━━━━━━━━━━━━━━━
+💾 *RAM:* 25.02 GB / 61.78 GB
+🆓 *Free:* 36.76 GB
+📦 *Heap:* 75.17 MB / 111.82 MB
+💿 *Disk:* 383G / 291G
+
+*🖥 ENVIRONMENT*
+━━━━━━━━━━━━━━━━━━
+🐧 *OS:* linux x64
+📗 *Node:* v20.20.2
+🔧 *CPU:* Intel(R) Xeon(R) Platinum
+━━━━━━━━━━━━━━━━━━
+
+_GWM-XMD Session pair connected_ 🔥`;                     
+            await sendButtons(Gifted, targetJid, {
+            title: '',
+            text: fanaui, 
+            footer: `> *Assistanted by Sir NjabuloJb UI 2026*`,
+            buttons: [
+                { 
+                    name: 'cta_copy', 
+                    buttonParamsJson: JSON.stringify({ 
+                        display_text: 'Copy Session id', 
+                        copy_code: 'GWM-XMD~' + b64data 
+                    }) 
                 }
             ]
         });
